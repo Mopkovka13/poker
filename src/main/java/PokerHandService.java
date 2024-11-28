@@ -166,13 +166,13 @@ public class PokerHandService {
                 .map(Card::getValue)
                 .sorted(Comparator.reverseOrder())
                 .toList();
+        int comparison;
 
         for (int i = 0; i < handValues.size(); i++) {
-            if (handValues.get(i).getNumericValue() > otherHandValues.get(i).getNumericValue()) {
-                return 1;
-            } else if (handValues.get(i).getNumericValue() < otherHandValues.get(i).getNumericValue()) {
-                return -1;
-            }
+            comparison = handValues.get(i).compareTo(otherHandValues.get(i));
+
+            if (comparison != 0)
+                return comparison;
         }
 
         return 0;
