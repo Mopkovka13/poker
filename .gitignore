@@ -1,0 +1,20 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+out/
+*.jar
+*.war
+
+# Maven specific files
+target/
+*.class
+
+# Gradle specific files
+.gradle/
+build/
